@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1576708497108" clover="3.2.0">
-  <project timestamp="1576708497108" name="All files">
-    <metrics statements="39" coveredstatements="37" conditionals="7" coveredconditionals="5" methods="8" coveredmethods="7" elements="54" coveredelements="49" complexity="0" loc="39" ncloc="39" packages="5" files="6" classes="6"/>
+<coverage generated="1576708904772" clover="3.2.0">
+  <project timestamp="1576708904772" name="All files">
+    <metrics statements="43" coveredstatements="41" conditionals="7" coveredconditionals="5" methods="12" coveredmethods="11" elements="62" coveredelements="57" complexity="0" loc="43" ncloc="43" packages="5" files="6" classes="6"/>
     <package name="lib">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <file name="app.js" path="/Users/home/alchemy/career/temperature/lib/app.js">
@@ -46,14 +46,18 @@
       </file>
     </package>
     <package name="lib.routes">
-      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
       <file name="temps.js" path="/Users/home/alchemy/career/temperature/lib/routes/temps.js">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
       </file>
     </package>
     <package name="lib.utils">

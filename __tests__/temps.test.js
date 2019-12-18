@@ -68,6 +68,25 @@ describe('temperatures routes', () => {
         });
       });
   });
+  it('gets all temperatures', () => {
+    return request(app)
+      .get('/api/v1/temps')
+      .then(res => {
+        expect(res.body).toEqual([{
+          date: date.toISOString(),
+          landAvgTemp: 14,
+          landAvgTempUncertainty: 2,
+          landMinTemp: 3,
+          landMinTempUncertainty: 1,
+          landMaxTemp: 20,
+          landMaxTempUncertainty: 1.3,
+          landAndOceanAvgTemp: 12,
+          landAndOceanAvgTempUncertainty: 1.1,
+          _id: expect.any(String),
+          __v: 0
+        }]);
+      });
+  });
   it('gets a temperature by id', () => {
     return request(app)
       .get(`/api/v1/temps/${temperatureData.id}`)
@@ -75,6 +94,26 @@ describe('temperatures routes', () => {
         expect(res.body).toEqual({
           date: date.toISOString(),
           landAvgTemp: 14,
+          landAvgTempUncertainty: 2,
+          landMinTemp: 3,
+          landMinTempUncertainty: 1,
+          landMaxTemp: 20,
+          landMaxTempUncertainty: 1.3,
+          landAndOceanAvgTemp: 12,
+          landAndOceanAvgTempUncertainty: 1.1,
+          _id: expect.any(String),
+          __v: 0
+        });
+      });
+  });
+  it('updates temperature', () => {
+    return request(app)
+      .patch(`/api/v1/temps/${temperatureData.id}`)
+      .send({ landAvgTemp: 12 })
+      .then(res => {
+        expect(res.body).toEqual({
+          date: date.toISOString(),
+          landAvgTemp: 12,
           landAvgTempUncertainty: 2,
           landMinTemp: 3,
           landMinTempUncertainty: 1,
