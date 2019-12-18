@@ -5,5 +5,6 @@ const mongoose = require('mongoose');
 const seedData = require('./lib/utils/seed-data');
 
 seedData()
+  // eslint-disable-next-line no-console
   .then(() => console.log('done seeding data'))
   .finally(() => mongoose.connection.close());
