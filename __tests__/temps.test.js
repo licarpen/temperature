@@ -126,4 +126,23 @@ describe('temperatures routes', () => {
         });
       });
   });
+  it('deletes temperature', () => {
+    return request(app)
+      .delete(`/api/v1/temps/${temperatureData.id}`)
+      .then(res => {
+        expect(res.body).toEqual({
+          date: date.toISOString(),
+          landAvgTemp: 14,
+          landAvgTempUncertainty: 2,
+          landMinTemp: 3,
+          landMinTempUncertainty: 1,
+          landMaxTemp: 20,
+          landMaxTempUncertainty: 1.3,
+          landAndOceanAvgTemp: 12,
+          landAndOceanAvgTempUncertainty: 1.1,
+          _id: expect.any(String),
+          __v: 0
+        });
+      });
+  });
 });
